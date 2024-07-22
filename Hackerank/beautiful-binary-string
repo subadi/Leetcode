@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+class BeautifulBinaryString
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt(),cnt=0;;
+		String str=sc.next(),str1="";
+		char[]ch=str.toCharArray();
+		for(int i=0;i<str.length();i++)
+		{
+			str1=str1+str.charAt(i);
+			if(str1.contains("010"))
+			{
+				cnt++;
+				str1="";
+
+			}
+			
+		}
+		System.out.println(""+cnt);
+	}
+}
